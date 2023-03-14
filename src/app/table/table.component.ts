@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.css']
 })
-export class AppComponent {
-  title = 'bottone';
-  data=[
+export class TableComponent{
+    displayedColumns: string[] = ['id', 'birthDate', 'firstName', 'lastName','gender','hireDate'];
+    dataSource = dati;
+}
+let dati:any=[
     {
         "id": 10001,
         "birthDate": "1953-09-02",
@@ -88,5 +90,4 @@ export class AppComponent {
         "gender": "F",
         "hireDate": "1989-08-24",
     },
-  ]
-}
+  ];
